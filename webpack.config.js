@@ -6,6 +6,8 @@ module.exports = {
   entry: {
     index: "./src/index.js", 
     apiHandler: "./src/apiHandler.js",
+    loadingModal: "./src/loadingModal.js",
+    tempToggle: "./src/tempToggle.js",
   },
   output: {
     filename: '[name].bundle.js',

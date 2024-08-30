@@ -15,6 +15,12 @@
           <a class="btn btn-ghost text-xl m-0 p-0">Atmos</a>
         </div>
         <div class="flex-none gap-2">
+          <div class="form-control gap-4 pr-4">
+            <label class="label cursor-pointer">
+              <span class="label-text pr-4">°C / °F</span>
+              <input type="checkbox" class="toggle" id="tempToggle" checked="checked" />
+            </label>
+          </div>
             <label class="input input-bordered flex items-center gap-2">
                 <input type="text" class="grow" placeholder="Search" id="searchField" />
                 <svg
@@ -39,6 +45,9 @@
         <!-- 6-Day Forecast Section -->
         <div id="forecast" class="forecast flex space-x-4">
             <!-- Forecast Content Here -->
+        </div>
+        <div id="initiateLoadModal">
+
         </div>
     </div>
 </body>
