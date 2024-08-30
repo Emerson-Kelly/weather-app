@@ -24,7 +24,7 @@ searchField.addEventListener("keypress", function (e) {
 export async function handleAPI(searchFieldValue) {
 
   console.log("User entered:", searchFieldValue);
-  initiateLoadModal();
+  initiateLoadModal(true);
   let metric = toggleTemp();
   const response = await fetch(
     `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${searchFieldValue}/next6days?unitGroup=${metric}&elements=datetime%2Cname%2Ctempmax%2Ctempmin%2Ctemp%2Cconditions%2Cicon&key=NVX2UNEEQ2C2M6SWL7G732EED&contentType=json`,

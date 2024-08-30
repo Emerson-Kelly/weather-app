@@ -28,7 +28,7 @@ export class distributeAPIData {
     renderForecast(dayContainer) {
         const iconPath = require(`./icons/${this.icon}.png`);
         dayContainer.innerHTML = `
-            <div class="forecast-day bg-blue-200 p-2 min-h-52 rounded-lg text-center flex flex-col justify-center">
+            <div class="forecast-day bg-neutral p-2 min-h-52 rounded-lg text-center flex flex-col justify-center w-64">
                 <center><img src="${iconPath}" alt="${this.conditions}"></center>
                 <h3>${this.datetime}</h3>
                 <p class="tempmin" data-original-temp="${this.tempmin}">${this.tempmin}°F / 
@@ -84,6 +84,7 @@ export function filterAPIData(data) {
         
         const dayContainer = document.createElement("div");
         dayContainer.classList.add('day-container');
+        dayContainer.classList.add('carousel-item');
         forecastContainer.appendChild(dayContainer);
         dayData.renderForecast(dayContainer);
 
