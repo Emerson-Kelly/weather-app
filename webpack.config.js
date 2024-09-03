@@ -8,6 +8,7 @@ module.exports = {
     apiHandler: "./src/apiHandler.js",
     loadingModal: "./src/loadingModal.js",
     tempToggle: "./src/tempToggle.js",
+    getDayOfWeek: "./src/getDayOfWeek.js",
   },
   output: {
     filename: '[name].bundle.js',

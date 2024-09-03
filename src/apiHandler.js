@@ -4,25 +4,23 @@ import { filterAPIData } from "./distributeAPIData";
 import { initiateLoadModal } from "./loadingModal";
 import { toggleTemp } from "./tempToggle";
 
-
 export const searchField = document.getElementById("searchField");
 
 searchField.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     e.preventDefault();
-    
-     // Remove all elements with class "day-container"
-     const forecastContainer = document.getElementById('forecast');
-     while (forecastContainer.firstChild) {
-         forecastContainer.removeChild(forecastContainer.firstChild);
-     }
-    
+
+    // Remove all elements with class "day-container"
+    const forecastContainer = document.getElementById("forecast");
+    while (forecastContainer.firstChild) {
+      forecastContainer.removeChild(forecastContainer.firstChild);
+    }
+
     handleAPI(searchField.value);
   }
 });
 
 export async function handleAPI(searchFieldValue) {
-
   console.log("User entered:", searchFieldValue);
   initiateLoadModal(true);
   let metric = toggleTemp();
