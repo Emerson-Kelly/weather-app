@@ -9,7 +9,7 @@ export const searchField = document.getElementById("searchField");
 searchField.addEventListener("keypress", function (e) {
   if (e.key === "Enter") {
     e.preventDefault();
-
+   
     // Remove all elements with class "day-container"
     const forecastContainer = document.getElementById("forecast");
     while (forecastContainer.firstChild) {

@@ -28,7 +28,7 @@ export class distributeAPIData {
             <img class="-ml-4 -mt-4 -mb-2" src="${iconPath}" alt="${this.conditions}">
             <h2 class="text-2xl mb-2 font-bold">${this.resolvedAddress}</h2>
             <p class="text-xl temp mb-2 text-info font-semibold" data-original-temp="${this.temp}">${this.temp}${metricSymbol}</p>
-            <p class="tempmin" data-original-temp="${this.tempmin}">${this.tempmin}${metricSymbol} / 
+            <p class="tempmin" data-original-temp="${this.tempmin}">${this.tempmin}${metricSymbol} <span class="text-gray-400">/</span> 
             <span class="tempmax mb-2" data-original-temp="${this.tempmax}">${this.tempmax}${metricSymbol}</span></p>
             <p>${this.conditions}</p>
         `;
