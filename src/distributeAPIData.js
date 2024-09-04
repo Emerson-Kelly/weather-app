@@ -25,12 +25,12 @@ export class distributeAPIData {
     const iconPath = require(`./icons/${this.icon}.png`);
     const currentWeatherContainer = document.getElementById("current-weather");
     currentWeatherContainer.innerHTML = `
-            <h2 class="text-2xl font-bold">${this.resolvedAddress}</h2>
-            <p class="text-xl temp" data-original-temp="${this.temp}">${this.temp}${metricSymbol}</p>
+            <img class="-ml-4 -mt-4 -mb-2" src="${iconPath}" alt="${this.conditions}">
+            <h2 class="text-2xl mb-2 font-bold">${this.resolvedAddress}</h2>
+            <p class="text-xl temp mb-2 text-info font-semibold" data-original-temp="${this.temp}">${this.temp}${metricSymbol}</p>
             <p class="tempmin" data-original-temp="${this.tempmin}">${this.tempmin}${metricSymbol} / 
-            <span class="tempmax" data-original-temp="${this.tempmax}">${this.tempmax}${metricSymbol}</span></p>
+            <span class="tempmax mb-2" data-original-temp="${this.tempmax}">${this.tempmax}${metricSymbol}</span></p>
             <p>${this.conditions}</p>
-            <img class="-ml-6" src="${iconPath}" alt="${this.conditions}">
         `;
   }
 

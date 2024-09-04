@@ -38,5 +38,6 @@ export async function handleAPI(searchFieldValue) {
   } finally {
     // Hide loading spinner
     initiateLoadModal(false);
+    
   }
 }
