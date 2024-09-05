@@ -2,7 +2,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
-  mode: "development",
+  mode: "production",
   entry: {
     index: "./src/index.js", 
     apiHandler: "./src/apiHandler.js",
@@ -29,6 +29,7 @@ module.exports = {
       title: 'Development',
       template: 'src/index.html',
       inject: 'body',
+      publicPath: './',
     }),
   ],
   optimization: {
