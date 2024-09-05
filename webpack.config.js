@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
   mode: "production",
   entry: {
-    index: "./src/index.js", 
+    index: "./src/index.js",
     apiHandler: "./src/apiHandler.js",
     loadingModal: "./src/loadingModal.js",
     tempToggle: "./src/tempToggle.js",
@@ -15,7 +15,7 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   devServer: {
     static: {
       directory: path.resolve(__dirname, 'dist'),
@@ -28,8 +28,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Development',
       template: 'src/index.html',
-      inject: 'body',
-      publicPath: './',
     }),
   ],
   optimization: {
