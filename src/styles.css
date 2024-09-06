@@ -37,10 +37,29 @@ html {
   }
 
   .search-bar {
-    width: 8rem;
+    width: 10rem;
+    gap: 0;
+  }
+
+  .form-control, .gap-4, .pr-1 span{
+    padding-right: 0.5rem;
+    letter-spacing: 0;
+  }
+
+  .form-control, .gap-4, .pr-1 label{
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .flex-none, .gap-2 {
+    gap: 0.8rem;
   }
 
   .input input {
     width: 2rem;
+  }
+
+  #current-weather img {
+    margin-top: -3rem;
   }
 }
